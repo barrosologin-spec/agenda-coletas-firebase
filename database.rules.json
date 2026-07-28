@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "products": {
+      ".indexOn": ["name", "ownerId"],
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "users": {
+      ".indexOn": ["email", "ownerId", "id"],
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "customers": {
+      ".indexOn": ["ownerId"],
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "sales": {
+      ".indexOn": ["ownerId", "sellerId"],
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}
